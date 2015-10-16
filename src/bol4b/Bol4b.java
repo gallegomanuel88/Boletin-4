@@ -12,17 +12,19 @@ public class Bol4b {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     consumo obj = new consumo ();
+     consumo obj = new consumo ();     
+     obj.setLitros(50);
+     obj.setpGas(1.57f);
      
-     float litros = 50 , pGas = 1.57f, vMed, distancia;
+     consumo obj2 = new consumo ();
+     obj2.setLitros(50);
+     obj2.setpGas(1.57f);
      String respuesta = JOptionPane.showInputDialog("Introduce velocidad media: ");
-     vMed = Float.parseFloat(respuesta);
+     obj2.setvMed(Float.parseFloat(respuesta));
      String respuesta1 = JOptionPane.showInputDialog("Introduce distancia");
-     distancia = Float.parseFloat(respuesta1);
+     obj2.setKm(Float.parseFloat(respuesta1));
      
-     consumo obj2 = new consumo (distancia, litros, vMed, pGas);
-     
-     JOptionPane.showMessageDialog(null, + obj2.getConsumoMedio(litros, distancia));
+     JOptionPane.showMessageDialog(null,"Consumo medio:" + obj2.getConsumoMedio());
      
     }
     
