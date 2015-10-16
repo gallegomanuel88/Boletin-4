@@ -30,21 +30,25 @@ public class consumo {
         return tiempo;
     }
 
-    public float getConsumoMedio(float litros, float distancia) {
-        float consumoMedio = (litros * (100 / distancia));
+    public float getConsumoMedio() {
+        float consumoMedio = ((litros*100) / distancia);
         return consumoMedio;
     }
 
-    public float getConsumoEuros1(float pGas, float litros, float distancia) {
-        float consumoEuros = ((litros * (100 / distancia)) * pGas);
-        return consumoEuros;
-    }
-
-    public float getConsumoEuros2(float pGas) {
-        return (getConsumoMedio(litros, distancia) * pGas);
+    public float getConsumoEuros() {
+        return getConsumoMedio() * pGas;
         
     }
-    public void setdistancia (float km){
+    public void setKm (float km){
         distancia = km;
+    }
+    public void setLitros (float l){
+        litros = l;
+    }
+    public void setvMed (float kmh){
+        vMed = kmh;
+    }
+    public void setpGas (float euros){
+        pGas = euros;
     }
 }
